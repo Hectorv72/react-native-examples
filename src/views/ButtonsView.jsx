@@ -25,7 +25,7 @@ const ButtonsView = () => {
 
       {/* una caracteristica importante de Pressable es */}
       {/* poder verificar si fue presionado y utilizarlo dentro de su style */}
-      <Pressable style={({ pressed }) => ({ backgroundColor: pressed ? 'blue' : 'transparent' })}
+      <Pressable style={({ pressed }) => ({ backgroundColor: pressed ? 'red' : 'blue' })}
         onPress={() => console.log('Pressable')}>
         <Text>Presionado con Pressable</Text>
       </Pressable>

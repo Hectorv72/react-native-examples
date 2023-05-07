@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import GeneralView from './src/views/GeneralView';
 import ButtonsView from './src/views/ButtonsView';
 import ListsView from './src/views/ListsView';
@@ -15,19 +15,22 @@ const views = {
   styled: { title: 'Estilos', view: <StyledView /> },
 }
 
+
 export default function App() {
   const [view, setView] = useState(views.general.view)
 
-  const renderButtons = Object.keys(views).map(
-    name =>
-      <TouchableOpacity style={styles.buttons} onPress={() => setView(views[name].view)}>
-        <Text>{views[name].title}</Text>
-      </TouchableOpacity>
-  )
+  const renderItem = ({ item }) =>
+    <TouchableOpacity style={styles.buttons} onPress={() => setView(views[item].view)}>
+      <Text>{views[item].title}</Text>
+    </TouchableOpacity>
 
   return (
     <View style={styles.container}>
-      {renderButtons}
+      {/* {renderButtons} */}
+      <FlatList
+        data={Object.keys(views)}
+        renderItem={renderItem}
+      />
       <View style={styles.subcontainer}>
         {view}
       </View>

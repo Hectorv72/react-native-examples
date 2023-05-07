@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { externo } from '../styles/misestilos'
 
 const StyledView = () => {
-  // const [activo, setActivo] = useState(false)
+  const [activo, setActivo] = useState(false)
 
-  // const handleChangeActivo = () => setActivo(!activo)
+  const handleChangeActivo = () => setActivo(!activo)
 
   return (
     <View style={styles.container}>
@@ -21,7 +21,7 @@ const StyledView = () => {
         <Text style={externo.texto}>Estilos desde un archivo externo</Text>
       </View>
 
-      {/* <View style={styleDinamico.containerDinamyc(activo)}>
+      <View style={styleDinamico.containerDinamyc(activo)}>
         <TouchableOpacity onPress={handleChangeActivo}>
           <Text style={styleDinamico.textoDynamic(activo)}>Estilos condicionales</Text>
         </TouchableOpacity>
@@ -29,7 +29,7 @@ const StyledView = () => {
 
       <View style={styles.vista}>
         <Text style={[styles.texto, styles.textoMasGrande]}>Estilos multiples</Text>
-      </View> */}
+      </View>
     </View>
   )
 }
@@ -38,7 +38,7 @@ export default StyledView
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'rgb(240,240,240)'
+    backgroundColor: 'rgb(240,240,240)',
   },
   vista: {
     marginVertical: 10,
@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
   }
 })
 
-// const styleDinamico = StyleSheet.create({
-//   containerDinamyc(estado) {
-//     return ({
-//       backgroundColor: estado ? 'rgb(200,200,200)' : 'transparent',
-//     })
-//   },
-//   textoDynamic: (estado) => ({
-//     textAlign: estado ? 'center' : 'left',
-//     fontSize: estado ? 20 : 14
-//   })
-// })
+const styleDinamico = StyleSheet.create({
+  containerDinamyc(estado) {
+    return ({
+      backgroundColor: estado ? 'rgb(200,200,200)' : 'transparent',
+    })
+  },
+  textoDynamic: (estado) => ({
+    textAlign: estado ? 'center' : 'left',
+    fontSize: estado ? 20 : 14
+  })
+})
