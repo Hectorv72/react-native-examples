@@ -43,31 +43,6 @@ const ShowScrollView = () => {
       <Text>Muchos elementos</Text>
       <Text>Muchos elementos</Text>
       <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
-      <Text>Muchos elementos</Text>
     </ScrollView>
   )
 }
