@@ -11,8 +11,9 @@ import HomeView from './src/views/HomeView';
 import FlexView from './src/views/FlexView';
 import SizeView from './src/views/SizeView';
 import ExpoIconsView from './src/views/ExpoIconsView';
+import FormularioView from './src/views/FormularioView';
 
-export default function App() {
+export default function App () {
   // instanciamos nuestro Stack que nos ayudara para crear la navegacion y las pantallas
   const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
     <>
       <NavigationContainer>
         {/* Nuestro controlador/context de navegacion */}
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="home">
           {/* Las vistas/paginas que tendra nuestra app */}
           {/* Esto se asemeja al funcionamiento de react router dom con las Routes */}
           <Stack.Screen name="home" component={HomeView} />
@@ -33,6 +34,7 @@ export default function App() {
           <Stack.Screen name="flex" component={FlexView} />
           <Stack.Screen name="size" component={SizeView} />
           <Stack.Screen name="icons" component={ExpoIconsView} />
+          <Stack.Screen name="formulario" component={FormularioView} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />

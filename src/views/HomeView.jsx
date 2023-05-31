@@ -13,6 +13,7 @@ const HomeView = ({ navigation }) => {
     { title: 'Flex', path: 'flex' },
     { title: 'Size Matters', path: 'size' },
     { title: 'Iconos', path: 'icons' },
+    { title: 'Formulario', path: 'formulario' },
   ]
 
   const renderItem = ({ item }) => <ButtonTitle title={item.title} action={() => navigation.navigate(item.path)} />
