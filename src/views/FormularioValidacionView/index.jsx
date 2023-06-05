@@ -4,7 +4,7 @@ import Formulario from './components/Formulario'
 import FormularioContext from './contexts/FormularioContext'
 import ListadoPersona from './components/ListadoPersona'
 
-const FormularioView = () => {
+const FormularioValidacionView = () => {
   const initForm = {
     nya: undefined,
     email: undefined,
@@ -14,9 +14,13 @@ const FormularioView = () => {
   const [form, setForm] = useState(initForm)
   const [list, setList] = useState([{ nya: 'Hector', email: '$_carlitox_gamer_$', telefono: 3704581113 }])
 
+  // actualiza el estado del formulario
   const handleUpdateForm = (name, value) => setForm(prev => ({ ...prev, [name]: value }))
 
+  // agrega a la lista una nueva persona
   const handleAddPersona = (persona) => setList(prev => [...prev, persona])
+
+  // borra los datos del formulario
   const handleClearForm = () => setForm(initForm)
 
   const context = {
@@ -37,7 +41,7 @@ const FormularioView = () => {
   )
 }
 
-export default FormularioView
+export default FormularioValidacionView
 
 const styles = StyleSheet.create({
   container: {

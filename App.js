@@ -12,8 +12,9 @@ import FlexView from './src/views/FlexView';
 import SizeView from './src/views/SizeView';
 import ExpoIconsView from './src/views/ExpoIconsView';
 import FormularioView from './src/views/FormularioView';
+import FormularioValidacionView from './src/views/FormularioValidacionView';
 
-export default function App () {
+export default function App() {
   // instanciamos nuestro Stack que nos ayudara para crear la navegacion y las pantallas
   const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,7 @@ export default function App () {
           <Stack.Screen name="size" component={SizeView} />
           <Stack.Screen name="icons" component={ExpoIconsView} />
           <Stack.Screen name="formulario" component={FormularioView} />
+          <Stack.Screen name="formulario-validacion" component={FormularioValidacionView} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />

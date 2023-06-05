@@ -14,6 +14,7 @@ const HomeView = ({ navigation }) => {
     { title: 'Size Matters', path: 'size' },
     { title: 'Iconos', path: 'icons' },
     { title: 'Formulario', path: 'formulario' },
+    { title: 'Formulario con validación', path: 'formulario-validacion' },
   ]
 
   const renderItem = ({ item }) => <ButtonTitle title={item.title} action={() => navigation.navigate(item.path)} />
