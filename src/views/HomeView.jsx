@@ -15,6 +15,8 @@ const HomeView = ({ navigation }) => {
     { title: 'Iconos', path: 'icons' },
     { title: 'Formulario', path: 'formulario' },
     { title: 'Formulario con validación', path: 'formulario-validacion' },
+    { title: 'Lista Redux', path: 'lista-redux' },
+    { title: 'Formulario Redux', path: 'formulario-redux' },
   ]
 
   const renderItem = ({ item }) => <ButtonTitle title={item.title} action={() => navigation.navigate(item.path)} />
